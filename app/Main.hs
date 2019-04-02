@@ -4,5 +4,5 @@ import Sorting
 
 main :: IO ()
 main = do
-    putStrLn $ "mergeSort: " ++ show (mergeSort [4, 0, 12, 13, -7, -1, -1])
+    putStrLn $ "mergesort: " ++ show (mergesort [4, 0, 12, 13, -7, -1, -1])
     

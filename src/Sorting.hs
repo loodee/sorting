@@ -1,12 +1,13 @@
 module Sorting 
-    ( mergeSort
+    ( mergesort
+    , quicksort
     ) where
 
 
 -- | mergesort
-mergeSort :: Ord a => [a] -> [a]
-mergeSort [x] = [x]
-mergeSort xs = merge (mergeSort left) (mergeSort right)
+mergesort :: Ord a => [a] -> [a]
+mergesort [x] = [x]
+mergesort xs = merge (mergesort left) (mergesort right)
     where (left,right) = halve xs
 
 merge :: Ord a => [a] -> [a] -> [a]
