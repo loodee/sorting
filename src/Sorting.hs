@@ -6,8 +6,9 @@ module Sorting
 
 -- | mergesort
 mergesort :: Ord a => [a] -> [a]
+mergesort []  = []
 mergesort [x] = [x]
-mergesort xs = merge (mergesort left) (mergesort right)
+mergesort xs  = merge (mergesort left) (mergesort right)
     where (left,right) = halve xs
 
 merge :: Ord a => [a] -> [a] -> [a]
