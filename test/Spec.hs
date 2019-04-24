@@ -53,8 +53,6 @@ isSorted (x:xs) | x <= head xs = isSorted xs
 
 -- | Ensures that every element in unsorted list is present in 
 --   the sorted list
-isPermutation :: Eq a => [a] -> [a] -> Bool
-isPermutation [] _ = True
-isPermutation (x:xs) ys
-    | x `elem` ys = isPermutation xs ys
-    | otherwise   = False
+isPermutation :: Ord a => [a] -> [a] -> Bool
+isPermutation xs ys = sort xs == sort ys
+
